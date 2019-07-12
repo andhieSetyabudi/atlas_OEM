@@ -1,0 +1,49 @@
+#######################################
+# Syntax Coloring Map for Statistic Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EC_OEM	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init KEYWORD2
+getDeviceType KEYWORD2
+getFirmwareVersion KEYWORD2
+isLockedAddress KEYWORD2
+setLockedAddress KEYWORD2
+setDeviceAddress KEYWORD2
+getStoredAddr KEYWORD2
+isInterruptAvailable KEYWORD2
+setInterruptAvailable KEYWORD2
+isLedOn KEYWORD2
+setLedOn KEYWORD2
+isHibernate KEYWORD2
+setHibernate KEYWORD2
+wakeUp KEYWORD2
+isNewDataAvailable KEYWORD2
+clearNewDataRegister KEYWORD2
+getProbeType KEYWORD2
+setProbeType KEYWORD2
+getStatusCalibration KEYWORD2
+clearCalibrationData KEYWORD2
+setCalibration KEYWORD2
+getTempCompensationValue KEYWORD2
+setTempCompensation KEYWORD2
+singleReading KEYWORD2
+getSalinity KEYWORD2
+getConductivity KEYWORD2
+getTDS KEYWORD2
+getAllParam KEYWORD2
+isSalinityStable KEYWORD2
+setSalinityPrecision KEYWORD2
+getSalinityStableCount KEYWORD2
+getSalinityDeviasion KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

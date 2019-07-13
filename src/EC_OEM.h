@@ -45,19 +45,6 @@
 #define pss_read_reg            0x20   // 4bytes
 //========================================================
 
-union data_handler                      //declare the use of a union data type
-{
-  byte i2c_data[4];                     //define a 4 byte array in the union
-  unsigned long answ;                   //define an unsigned long in the union
-  unsigned int two_byte_answ;           //define an unsigned int in the union
-};
-
-struct param_OEM_EC
-{
-  float salinity;
-  float conductivity;
-  float tds;
-};
 
 class EC_OEM{
   private:
@@ -77,6 +64,7 @@ class EC_OEM{
     bool i2c_write_long(byte reg, unsigned long data);
     bool i2c_write_byte(byte reg, byte data);
     void i2c_read(byte reg, byte number_of_bytes_to_read, unsigned long timeout = 500UL);
+    void delayForMillis(unsigned long timeout);
   public:
     EC_OEM(uint8_t pin = NONE_INT, uint8_t addr_ = i2c_id);
     void init(bool led_ = off_EC , bool hibernate_ = false, uint8_t int_CTRL = DISABLED_INTERRUPT );

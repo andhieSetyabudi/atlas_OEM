@@ -36,6 +36,35 @@
 
 #include <Arduino.h>
 #include <Wire.h>
+
+union data_handler                      //declare the use of a union data type
+{
+  byte i2c_data[4];                     //define a 4 byte array in the union
+  unsigned long answ;                   //define an unsigned long in the union
+  unsigned int two_byte_answ;           //define an unsigned int in the union
+};
+
+struct param_OEM_EC
+{
+  float salinity;
+  float conductivity;
+  float tds;
+};
+
+struct param_OEM_DO
+{
+  float inMilligrams;
+  float inSaturation;  
+};
+
+struct param_OEM_DO_compensation
+{
+  float temperature;
+  float pressure;
+  float salinity;
+};
+
+
 template <typename T>
 uint8_t getAddrressDevice(const T deviceType)
 {

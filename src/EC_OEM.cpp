@@ -1,6 +1,6 @@
 #include "EC_OEM.h"
 
-void delayForMillis(unsigned long timeout)
+void EC_OEM::delayForMillis(unsigned long timeout)
 {
   unsigned long t = millis();
   while(millis() - t <= timeout){}    // do nothing  
